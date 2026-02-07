@@ -1,0 +1,285 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url(OPPA.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+    /* background-color: #0b2230;  
+    animation: animateBg 1s linear infinite ;
+    background: linear-gradient(90deg, rgba(4, 201, 215, 0.841), rgba(25, 7, 145, 0.622), rgb(3, 177, 190), rgba(18, 1, 103, 0.523) 100% ); */
+    
+
+
+.container .form-box{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: linear-gradient(#0f5485, rgba(1, 92, 99, 0.459), #0f5485, rgba(1, 96, 103, 0.523) );
+    border: 2px solid #0ef;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px #0ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    backdrop-filter:blur(10px) ;
+    
+}
+.container .form-box-register{
+    height: 450px;
+}
+
+
+.form-box h1{
+    font-size: 30px;
+    font-weight:700;
+    color: azure;
+}
+
+.form-box .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #fff;
+    color: azure;
+    padding: 0 40px 0 5px;
+    font-size: 16px;
+}
+
+.input-box input:focus{
+    border-bottom: 3px solid rgb(15, 224, 243);
+}
+
+.success input{
+    border-bottom: 2px solid rgb(4, 235, 4);
+}
+
+.error input{
+    border-bottom: 2px solid rgb(237, 32, 32);
+}
+
+.error .label-username{
+    color: rgb(237, 32, 32);
+    font-weight:600;
+}
+
+
+
+
+
+
+
+.input-box label{
+    position: relative;
+    top: -30px;
+    color: azure;
+    pointer-events: none;
+    font-size: 14px;
+    transition: .5s;
+}
+
+
+.input-box .label-email {
+    position: relative;
+    top: -30px;
+    color: azure;
+    pointer-events: none;
+    font-size: 14px;
+    transition: .5s;
+}
+
+.error .label-email{
+    color: rgb(237, 32, 32);
+    font-weight:600;
+}
+
+
+.input-box .email-icontag{
+    left: 236px;
+}
+
+
+
+.input-box .label-password{
+    position: relative;
+    top: -30px;
+    color: azure;
+    pointer-events: none;
+    font-size: 14px;
+    transition: .5s;
+}
+
+.error .label-password{
+    color: rgb(237, 32, 32);
+    font-weight:600;
+}
+
+.input-box .label-cpassword{
+    position: relative;
+    top: -30px;
+    color: azure;
+    pointer-events: none;
+    font-size: 14px;
+    transition: .5s;
+}
+
+.error .label-cpassword{
+    color: rgb(237, 32, 32);
+    font-weight:600;
+}
+
+
+
+
+.input-box svg{
+    position: relative;
+    color: azure;
+    top: -30px;
+    left: 200px;
+    font-size:20px ;
+    
+}
+
+
+.input-box  span {
+    position: relative;
+    color: azure;
+    top: -30px;
+    
+    font-size:18px ;
+    left: 210px;
+}
+
+.input-box  .span2{
+    left: 158px;
+}
+
+
+/* exclamation and Error message */
+.input-box  .span-error{
+    position: relative;
+    left:-20px;
+    font-size: 16px;
+    color: red;
+    top: -30px;
+    visibility: hidden;
+  
+}
+.error .span-error{
+    visibility: visible;
+}
+
+
+
+
+.input-box p{
+    position: relative;
+    top: -38px;
+    left: 20px;
+    font-size: 14px;
+    color: red;
+    font-weight: 500;
+    visibility: hidden;
+    
+}
+.error p{
+    visibility: visible;
+}
+
+
+
+
+.btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    margin: 4px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    border: 0; 
+}
+
+
+.btn::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(#081b29, #0ef, #081b29, #0ef );
+    top:-100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    height: 300%;
+    z-index: -1;
+    transition: .5s;
+    border: 0;
+}
+
+
+.btn:hover::before{
+    top: 0;
+}
+
+
+.login-link {
+    font-size: 15px;
+    color: azure;
+    text-align: center;
+}
+
+
+.login-link a{
+    text-decoration: none;
+    color: rgb(26, 5, 93);
+    font-weight: 700;
+}
+
+
+.login-link a:hover{
+    color: rgb(168, 136, 255);
+}
+
+
+@media(max-width: 420px){
+    .container .form-box{
+        width:250px ;
+        justify-content: center;
+    }
+
+    .input-box svg{
+        left: 158px;
+    }
+
+    .input-box  span {
+        left: 165px;
+    }
+    .input-box .email-icontag{
+    left: 191px;
+    }
+    .input-box  .span2{
+    left: 112px;
+}
+}
